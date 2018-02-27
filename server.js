@@ -5,6 +5,17 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articleOne = {
+    title: 'deveshyam',
+    heading: 'Article one',
+    date: '5 sept 2018',
+    content: `<p>this is the paragraph im practicing things on imad console they have provided me a domain name also </p>
+                 <p>this is the paragraph im practicing things on imad console they have provided me a domain name also </p>
+                 <p>this is the paragraph im practicing things on imad console they have provided me a domain name also </p>`
+};
+
+
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
