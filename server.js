@@ -4,14 +4,31 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-
-var articleOne = {
+var articles ={
+ 'article-one' : {
     title: 'deveshyam',
     heading: 'Article one',
     date: '5 sept 2018',
     content: `<p>this is the paragraph im practicing things on imad console they have provided me a domain name also </p>
                  <p>this is the paragraph im practicing things on imad console they have provided me a domain name also </p>
                  <p>this is the paragraph im practicing things on imad console they have provided me a domain name also </p>`
+},
+'article-two' : {
+    title: 'deveshyam',
+    heading: 'Article one',
+    date: '5 sept 2018',
+    content: `<p>this is the paragraph im practicing things on imad console they have provided me a domain name also </p>
+                 <p>this is the paragraph im practicing things on imad console they have provided me a domain name also </p>
+                 <p>this is the paragraph im practicing things on imad console they have provided me a domain name also </p>`
+},
+'article-three' : {
+    title: 'deveshyam',
+    heading: 'Article one',
+    date: '5 sept 2018',
+    content: `<p>this is the paragraph im practicing things on imad console they have provided me a domain name also </p>
+                 <p>this is the paragraph im practicing things on imad console they have provided me a domain name also </p>
+                 <p>this is the paragraph im practicing things on imad console they have provided me a domain name also </p>`
+}
 };
 
 function createTemplate(data){
