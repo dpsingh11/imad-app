@@ -19,15 +19,16 @@ function createTemplate(data){
     var date = data.date;
     var heading = data.heading;
     var content = data.content;
-    var htmlTemplate = `<html>
-    <head>
-        <title>
-            $(title) 
-        </title>
-        <meta name="viewport" content="width=device-width,initial-scale-1"/>
-       <link href="/ui/style.css" rel="stylesheet" />
-    </head>
-    <body>
+    var htmlTemplate = `
+    <html>
+        <head>
+            <title>
+                    $(title) 
+            </title>
+            <meta name="viewport" content="width=device-width,initial-scale-1"/>
+            <link href="/ui/style.css" rel="stylesheet" />
+        </head>
+     <body>
         <div class="container">
             <div>
                  <a href="/">Home</a>
@@ -43,8 +44,9 @@ function createTemplate(data){
                  $(content)
             </div>
         </div>
-    </body>
-</html>`;
+     </body>
+    </html>
+`;
 return htmlTemplate;
 }
 
