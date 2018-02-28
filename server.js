@@ -14,17 +14,17 @@ var articles ={
                  <p>this is the paragraph im practicing things on imad console they have provided me a domain name also </p>`
 },
 'article-two' : {
-    title: 'deveshyam',
-    heading: 'Article one',
-    date: '5 sept 2018',
+    title: 'somethingfor2',
+    heading: 'Article two',
+    date: '7 sept 2018',
     content: `<p>this is the paragraph im practicing things on imad console they have provided me a domain name also </p>
                  <p>this is the paragraph im practicing things on imad console they have provided me a domain name also </p>
                  <p>this is the paragraph im practicing things on imad console they have provided me a domain name also </p>`
 },
 'article-three' : {
     title: 'deveshyam',
-    heading: 'Article one',
-    date: '5 sept 2018',
+    heading: 'Article three',
+    date: '10 sept 2018',
     content: `<p>this is the paragraph im practicing things on imad console they have provided me a domain name also </p>
                  <p>this is the paragraph im practicing things on imad console they have provided me a domain name also </p>
                  <p>this is the paragraph im practicing things on imad console they have provided me a domain name also </p>`
@@ -71,17 +71,12 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function(req, res) {
-     res.send(createTemplate(articleOne));
+app.get('/:articleName', function(req, res) {
+     var articleName = req.params.articleName;
+     res.send(createTemplate(articles[articleName]));
 });
 
-app.get('/article-two', function(req, res) {
-     res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
 
-app.get('/article-three', function(req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
