@@ -11,6 +11,7 @@ function moveRight(){
     img.style.marginLeft = marginLeft + 'px';
 }
 
+var counter = 0;
 var button = document.getElementById('counter');
 button.onClick = function() {
     counter = counter + 1;
