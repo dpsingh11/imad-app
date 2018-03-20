@@ -24,7 +24,7 @@ submit.onclick = function(){
      // var name = nameInput.value;
      //make the request
      request.open('POST', 'http://deveshprakashsingh.imad.hasura-app.io/login',true);
-     request.sendRequestHeader('Content-Type','application/json');
+     request.setRequestHeader('Content-Type','application/json');
      request.send(JSON.stringify({username:username, password:password}));
  };
     
