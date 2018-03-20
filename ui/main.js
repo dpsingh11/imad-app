@@ -21,7 +21,7 @@ submit.onclick = function(){
      var password = document.getElementById('password').value;
      console.log(username);
      console.log(password);
-      var name = nameInput.value;
+     // var name = nameInput.value;
      //make the request
      request.open('POST', 'http://deveshprakashsingh.imad.hasura-app.io/login',true);
      request.sendRequestHeader('Content-Type','application/json');
